@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = parseFloat(prompt("Nhập sô kWh"),"")
+    if (a>1000){
+        let cost = (a-1000)*2000 +500*1500+500*1200;
+        alert("số tiền bạn phải trả là " + cost + "vnd" );
+    } else  if (a>500) {
+        let cost = (a - 500) * 1500 + 500 * 1200;
+        alert("số tiền bạn phải trả là " + cost + "vnd");
+    }
+      else {
+          alert("số tiền bạn phải tra là"+ cost + "vnd");
+    }
+
+</script>
+</body>
+</html>

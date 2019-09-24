@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = parseFloat(prompt("Nhập số tiền thu nhập  ?"));
+    let Thue =0;
+    if (a<5000000){
+         Thue = a*5/100;
+    } else if (a<10000000) {
+         Thue = a*10/100 -250000
+    }else if (a<18000000) {
+         Thue = a*15/100 -750000
+    }else if (a<32000000) {
+         Thue = a*20/100 -1650000 ;
+    }else if (a<52000000) {
+         Thue = a*20/100 -3250000;
+    }else if (a<80000000) {
+         Thue = a*20/100 -5850000 ;
+    }else
+         Thue = a*20/100 -9850000 ;
+    {
+        alert("Tiền thuế phải đóng là" + Thue + "vnd");
+    }
+
+</script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Số tiền lãi ngân hàng</title>
+</head>
+<body>
+<script>
+    let Sotien = parseFloat(prompt("Số tiền bạn gửi"),"");
+    let Thoigian = parseFloat(prompt("Thời gian bạn gửi bao năm"),"");
+    let laithang =  parseFloat(prompt("Lai suat hang thang : "),"");
+    let res = 0;
+     for ( i = 0;i < Thoigian; i++) {
+
+         res += Sotien*laithang/100;
+         Sotien+= res;
+    }
+     alert(res);
+
+
+
+
+</script>
+</body>
+</html>
