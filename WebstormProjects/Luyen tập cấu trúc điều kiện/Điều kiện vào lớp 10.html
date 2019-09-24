@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Điều kiện vào lớp 10</title>
+</head>
+<body>
+<fieldset>
+    <legend>Điều kiên vào lớp 10</legend>
+    <table>
+        <tr><td>Tuổi</td>
+        <td> <input id = "Tuoi" type="number"> </td>
+        </tr>
+
+
+            <tr><td>Tốt nghiệp thcs</td>
+           <td><input id = "thcs" type="checkbox"></td> </tr>
+
+
+        <tr> <td>Điểm trung bình </td>
+          <td><input id = "dtb"type ="number">   </td>   </tr>
+
+         <tr>
+             <td colspan="2">
+                 <button onclick="Check()">OK</button>
+
+             </td>
+
+
+         </tr>
+
+
+
+    </table>
+
+</fieldset>
+<script>
+    function Check() {
+        let a = document.getElementById("Tuoi");
+        let b = document.getElementById("thcs");
+        let c = document.getElementById("dtb");
+        let d = b.checked;
+        if (a =="" || d == false || c == "") {
+            alert ("Xin hãy nhập vào");
+        }
+        else if (a > 14 && c > 3.5 && d == true) {
+            alert("Bạn đủ điều kiện vào lớp 10");
+
+        } else {
+            alert("Bạn không đủ điều kiện vào lớp 10");
+        }
+    }
+
+</script>
+</body>
+</html>

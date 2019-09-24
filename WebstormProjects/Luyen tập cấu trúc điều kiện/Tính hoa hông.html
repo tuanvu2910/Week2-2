@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính hoa hồng </title>
+</head>
+<body>
+<p>Nhập danh sô buôn bán :</p>
+<input id="Doanhso" type = "number"> $
+<button id="Tinhtoan" onclick="Check()">Check</button>
+<output id="hoahong" ></output>
+
+</body>
+<script>
+    function Check() {
+        let Doanhso = document.getElementById("Doanhso").value;
+        Doanhso = parseInt(Doanhso);
+        let hoahong = (Doanhso * 10)/100;
+        document.getElementById("hoahong").value= hoahong;
+
+
+
+    }
+
+
+</script>
+
+
+
+</html>

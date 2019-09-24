@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let sophut =prompt("so phut gọi điện là");
+  if (sophut>200){
+      let cost = (sophut-200)*800 +150*1000+50*1200;
+      alert("số tiền bạn phải trả là " + cost + "vnd" );
+  } else  if (sophut>150) {
+      let cost = (sophut - 150) * 1000 + 50 * 1200;
+      alert("số tiền bạn phải trả là " + cost + "vnd");
+  }else  if (sophut>50) {
+      let cost = (sophut - 50) * 1000 +50*1200;
+      alert("số tiền bạn phải trả là " + cost + "vnd");
+  } else {
+      let cost = sophut *1200;
+      alert("số tiền bạn phải trả là " + cost + "vnd");
+  }
+
+</script>
+</body>
+</html>

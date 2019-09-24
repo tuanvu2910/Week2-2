@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xét học lực học sinh</title>
+</head>
+<body>
+<script>
+    let a = prompt("điểm bài kiểm tra miệng");
+    let b = prompt("điểm bài kiểm tra tháng");
+    let c = prompt("điểm bài kiểm tra giữa kỳ");
+    let d = prompt("điểm bài kiểm tra cuối kỳ");
+    let diemtrungbinh = (a+2*b+3*c+4*d);
+    if (diemtrungbinh < 3.5){
+        alert("Đúp");
+    } else if (diemtrungbinh < 5){
+        alert("lên lớp");
+    } else if (diemtrungbinh < 7) {
+        alert("Học sinh trung bình");
+    } else if (diemtrungbinh < 9 ) {
+        alert("Học sinh khá");
+    } else {
+        alert("Học sinh giỏi");
+    }
+
+
+</script>
+</body>
+</html>
