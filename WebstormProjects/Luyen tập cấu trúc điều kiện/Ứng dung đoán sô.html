@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ứng dụng đoán số</title>
+</head>
+<body>
+<fieldset style="padding: auto"> <legend>Play game</legend>
+<button id="play" onclick="Play()">Play</button>
+</fieldset>
+<script>
+
+   let a = 0;b=0;sonhap=0
+
+     function Play() {
+         let NhoNhat = parseInt(prompt("Từ",""));
+         let LonNhat = parseInt(prompt("Đến",""));
+         sonhap = Math.floor(Math.random()*((LonNhat-NhoNhat)+ 1)+NhoNhat);
+
+
+         Game();
+
+     }
+     function Game() {
+
+         for (i = 0; i < 3; i++) {
+             let SoChon = parseInt(prompt("Số bạn chọn là ?"));
+             if (SoChon == sonhap) {
+                 alert(" Chúc mừng bạn");
+                 break;
+
+             } else (SoChon != sonhap)
+             {
+
+                 if (SoChon < sonhap)
+                 {
+                     alert("Phải lớn hơn"
+                     )
+                 }
+                 else {
+                     alert("Phải nhỏ hơn"
+                     )
+                 }
+
+
+
+             }
+         }
+         Choilai();
+     }
+    function Choilai() {
+
+
+         if ( confirm("Ban muôn chơi lại ?") ==true)
+         {
+             Play();
+         }else
+         {
+             document.write("KẾT Thúc");
+         }
+     }
+
+</script>
+</body>
+</html>
