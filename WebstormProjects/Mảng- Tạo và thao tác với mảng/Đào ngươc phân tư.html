@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Đảo ngược giá trị một mảng</title>
+</head>
+<fieldset>
+    <legend>Đảo ngược giá trị một mảng</legend>
+    Nhập Giá Trị Vào Mảng<input type="text" id="value1"> </br>
+    <button onclick="addArray()">Nhập</button>
+    <input type="text" disabled id="value2"></br>
+    <button onclick="Reverse()">Đảo ngược</button>
+
+</fieldset>
+<body>
+<script>
+let a = 0;
+let x =[]
+let first = 0;
+let last = x.length;
+
+function addArray() {
+     document.getElementById("value1").value;
+    x[0] = document.getElementById("value1").value;
+     {
+         document.getElementById("value2").value += x[0] + "-";
+
+    }
+
+    document.getElementById("value1").value = "";
+
+}
+
+
+   function Reverse() {
+       let tmp = document.getElementById("value2").value;
+           tmp = tmp.substring(0,tmp.length-1);
+       let c = tmp.split("-");
+       c.reverse();
+       document.getElementById("value2").value=c;
+
+
+
+   }
+
+</script>
+</body>
+</html>
