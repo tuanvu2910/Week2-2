@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> chèn - vào sô chẵn</title>
+</head>
+<body>
+<input type="number" id="txtnhapso">
+<button onclick="txtthem()">Thêm</button>
+<output id="txtketqua"></output>
+<script>
+
+    function txtthem() {
+        let b = document.getElementById("txtnhapso").value;
+        let a = b.split("");
+        let c = [];
+        for (i=0;i<a.length;i++)
+        {
+            if (a[i-1]&&2==0&&a[i]%2==0){
+
+             c.push("-");
+             c.push(a[i]);
+            }
+            else
+            {
+                c.push(a[i]);
+            }
+        }
+
+           document.getElementById("txtketqua").value= c.join('');
+
+    }
+
+</script>
+</body>
+</html>
