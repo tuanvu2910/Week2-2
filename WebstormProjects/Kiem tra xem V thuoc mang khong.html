@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<labe>Nhập V <input type="text" id = "SoV"></labe>
+<button onclick="Check()">Check</button>
+
+<script>
+    let  a =[];
+    let mang =[];
+
+    for (let i=0;i<11;i++){
+        let b = Math.floor(Math.random()*100);
+        a.push(b);
+    }
+    console.log(a)
+    function Check() {
+        let  c = parseInt(document.getElementById("SoV").value);
+        for (let j=0;j<a.length;j++){
+          if(c != a[j]){
+          mang.push(a[j]);
+          }
+        }
+       document.write(mang);
+    }
+
+</script>
+</body>
+</html>

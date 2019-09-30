@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let  a =[];
+    let  c = 0;
+    let  k = 0;
+    let giatritb = 0;
+    for (let i=0;i<11;i++){
+        let b = Math.floor(Math.random()*100);
+        a.push(b);
+    }
+    for (j=0;j<a.length;j++){
+        if (a[j] > c){
+            c = a[j];
+        }
+    }
+    for (z=0;z<a.length;z++){
+        k+= a[z];
+        giatritb = k/a.length;
+    }
+    document.write("Số lớn nhất trong mảng là:"+c+"và tổng sô trung bình của mảng là "+giatritb);
+
+
+</script>
+</body>
+</html>

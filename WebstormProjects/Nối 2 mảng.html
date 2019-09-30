@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+
+</head>
+<body><fieldset>
+    <table>
+        <tr><td><button onclick="manga()">Mảng a</button><td>
+            <td><input disabled id="outputa" type="text"></td>
+
+ <tr>
+        <td><button onclick="mangb()">Mang b</button></td>
+        <td><input disabled id="outputb" type="text"></td>
+    </tr>
+        <tr>
+            <td><button onclick="mangc()">Mang c</button></td>
+            <td><input disabled id="outputc" type="text"></td>
+        </tr>
+    </table>
+
+    </fieldset>
+<script>
+    let a=[];
+    let c=[];
+    let value1 = document.getElementById("outputa").value;
+    let value2 = document.getElementById("outputb").value;
+    let value3 = document.getElementById("outputc").value;
+    function manga() {
+        for (let i=0;i<10;i++){
+            let b = Math.floor(Math.random()*100);
+            a.push(b);
+
+        }
+        document.getElementById("outputa").value+= a;
+    }
+    function mangb() {
+        for (let j=0;j<10;j++){
+            let d = Math.floor(Math.random()*100);
+            c.push(d);
+
+        }
+        document.getElementById("outputb").value+= c;
+    }
+    function mangc() {
+        let tmp = a.concat(c);
+        document.getElementById("outputc").value = tmp;
+    }
+
+
+
+</script>
+</body>
+</html>

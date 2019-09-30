@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>10 sô nguyên bao sô lơn hơn 10</title>
+</head>
+<body>
+<script>
+    let a = []
+    let c = []
+    for (let i=0;i<11;i++){
+        let b = Math.floor(Math.random()*100);
+        a.push(b);
+    }
+    for (let j=0;j<a.length;j++) {
+        if (a[j] > 10) {
+            c.push(a[j]);
+        }
+
+    }
+    document.write(c);
+
+
+
+
+
+</script>
+
+</body>
+</html>

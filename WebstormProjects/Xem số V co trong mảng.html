@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<labe>Nhập V <input type="text" id = "SoV"></labe>
+<button onclick="Check()">Check</button>
+
+<script>
+    let  a =[];
+    let flag = false;
+    for (let i=0;i<11;i++){
+        let b = Math.floor(Math.random()*100);
+        a.push(b);
+    }
+    console.log(a)
+    function Check() {
+        let  c = parseInt(document.getElementById("SoV").value);
+        for (let j=0;j<a.length;j++){
+            if (c==a[j]){
+                document.write( "V in the array");
+                flag = true;
+                break;
+            }
+        }
+        if (flag == false){
+            document.write("V isn't in the array")
+        }
+    }
+
+</script>
+</body>
+</html>

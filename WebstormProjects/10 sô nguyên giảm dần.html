@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body><fieldset><legend> Nhập số nguyên
+    <input type="text" id="nhapso"></br>
+    Giá trị dảm dần
+    <button onclick="Sort()" >Click</button>
+    <button onclick="random()">Random</button>
+
+    <output id="output"></output>
+
+</legend></fieldset>
+<script>
+    let  a =[];
+    let mang =[];
+    function random() {
+    for (let i=0;i<11;i++){
+        let b = Math.floor(Math.random()*100);
+        a.push(b);
+
+    }
+    document.getElementById("output").value+= a;
+    }
+
+
+   function Sort() {
+        document.getElementById("output").value="";
+        a.sort((c,d) => d-c);
+       document.getElementById("output").value = a;
+}
+
+</script>
+</body>
+</html>
