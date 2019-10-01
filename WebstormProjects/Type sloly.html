@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>type slwoly</title>
+</head>
+<body>
+<center>
+    <h2>Type anthing slowly</h2>
+    <form name="k">
+        <textarea name="txt" cols="40" rows="10" onkeydown="typeTextarea();"></textarea>
+    </form>
+</center>
+  <script>
+      let a =[];text="";
+      a[1]="B";a[2]="ạ";a[3]="n";a[4]=" ";a[5]="q";a[6]="u";a[7]="á";a[8]=" ";a[9]="đ";a[10]="ẹ";a[11]="p";
+      a[12]=" ";a[13]="t";a[14]="r";a[15]="a";a[16]="i";
+
+      function typeTextarea() {
+         k =  document.k.txt.value;
+         z = k.length;
+         if (z > 0)
+             {
+             for (let i =1;i<=z;i++){
+                 text = text + a[i];
+             if (i == 16)
+             {
+                 document.k.txt.value ="";
+                 z = "";
+             }
+             }
+
+
+             }
+          document.k.txt.value = text;
+          text="";
+          setTimeout("typeTextarea()", 1);
+
+      }
+
+
+
+
+
+  </script>
+</body>
+</html>
