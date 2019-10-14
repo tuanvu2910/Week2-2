@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+
+<html>
+<head><title>
+Lam viec voi CSS
+
+
+</title></head>
+
+<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href= "css/StyleStanford.css"/>
+<style>
+   body{
+      font-family: 'Roboto', sans-serif;
+   }
+</style>
+<body background = "FontImage/body.jpg" onload=" playVid()">
+<div style="width:100%">
+<div style="width:400px;margin-left:auto;margin-right:auto;">
+<fieldset class="login_group_field" >
+<legend style="margin: auto">Login</legend>
+<table>
+
+<tr>
+<td>
+
+YourAcount
+
+</td>
+<td>
+<input type="text" id="txtTenDangNhap"/>
+</td>
+</tr>
+<tr>
+<td>
+PassWord
+</td>
+<td>
+<input type="password" id="txtMatKhau"/>
+</td>
+</tr>
+<tr>
+<td>
+</td>
+<td>
+   <a  onclick="Check()" class="stanfButton"><img src="FontImage/Ball.jpg"/> Go</a>
+&nbsp; <a href="#"class="stanfButton"><img src="images/cancel.gif"/> Huy Bo</a>
+</td>
+</tr>
+</table>
+</fieldset>
+</div>
+</div>
+<iframe src="https://www.nhaccuatui.com/mh/background/scWnTJazEWTI" width="1" height="1" frameborder="0" allowfullscreen allow="autoplay"></iframe>
+
+<script>
+let myAdmin = [
+        "Tuanvu2910",
+        "Tuanvu1992"
+];
+let myPassword=[
+        "123456",
+        "654321"
+];
+function Check() {
+   let admin = document.getElementById("txtTenDangNhap").value;
+   let password = document.getElementById("txtMatKhau").value;
+   let flag = false;
+   for (i=0;i<myAdmin.length;i++){
+      if (admin == myAdmin[i] && password == myPassword[i]){
+         flag = true;
+         Go();
+         break;
+      }
+   }
+if(flag == false) {
+      alert("Nhập lại");
+   }
+}
+
+function Go() {
+   window.location.assign("http://localhost:63342/Qu%E1%BA%A3n%20l%C3%BD%20%C4%91%E1%BB%99i%20b%C3%B3ng/Quan%20ly%20sa%20pham1.html?_ijt=7iqpoinjhaa977j314b6ne65fd");
+}
+
+</script>
+</body>
+</html>

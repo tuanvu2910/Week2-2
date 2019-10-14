@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+
+
+
+<body>
+<fieldset> <legend>Viết chương trình khởi tạo/nhập vào một mảng số nguyên và đảo ngược các phần tử trong mảng đó.</legend>
+    <input type="text" id = "txtNhap">
+    <button onclick="reversed()"> Đảo ngược </button>
+    <input type="text"  disabled id = "result">
+</fieldset>
+
+<script>
+    function reversed() {
+        let a = document.getElementById("txtNhap").value;
+        let z = a.split(",");
+
+        document.getElementById("result").value = z.reverse();
+    }
+
+    
+</script>
+</body>
+</html>

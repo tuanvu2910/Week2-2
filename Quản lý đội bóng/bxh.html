@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PlayGame</title>
+</head>
+
+<style>
+
+    table{
+        margin: auto;
+    }
+    body {
+        background-image: url("FontImage/Ball.jpg");
+        font-family: 'Roboto', sans-serif;
+    }
+    .stanfButton a, .stanfButton a:link, .stanfButton a:visited {
+        color: #3D3D3D;
+    }
+
+    .stanfButton:hover {
+        border: 1px solid #F37900;
+        color: #F37900;
+    }
+
+    .stanfButton:active {
+        /*background: -webkit-gradient(linear, left top, left bottom, from(#87BF81), to(#3B7F34));     background: -moz-linear-gradient(top, #87BF81, #3B7F34);*/
+        background: #F37900;
+        color: white;
+    }
+
+    .Show {
+        display: block;
+        font-family: Arial;
+        font-size: 12px;
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        -webkit-box-shadow: rgba(0, 0, 0, .5) 0px 1px 2px;
+        moz-box-shadow: rgba(0, 0, 0, .5) 0px 1px 2px 4px;
+        vertical-align: middle;
+        padding-top: 20px;
+        display: block;
+        border: solid 1px lightgrey;
+        border-radius: 10px 10px 10px 10px;
+        font-weight: bold;
+        color: midnightblue;
+        background-color: #ffffff;
+        filter: alpha(opacity=90);
+        opacity: 0.9;
+        width: 700px;
+    }
+
+</style>
+<body onload>
+<table style="width:100%; bolder-collapse:collapse;" border="1">
+
+    <tr>
+        <td width=20%><img src="FontImage/PremierLeague.png"/></td>
+        <td style="text-align:center;background-color: white"><h1 style="color:#735fad;">Premier league 2019/20</h1>
+        </td>
+    </tr>
+</table>
+<div style="margin: auto" class="Show">  <fieldset><legend style="text-align: center"><h1>Ranking</h1></legend>
+
+    <table style="border:0px" id="print">
+
+    </table>
+</fieldset></div>
+<iframe src="https://www.nhaccuatui.com/mh/background/XybyviDJB4" width="1" height="1" frameborder="0" allowfullscreen allow="autoplay"></iframe>
+<script src="js/PMLdata.js"></script>
+<script>
+    function  Display() {
+        PMLdata = PMLdata.sort(function (a, b) {
+            return b.Point - a.Point
+            
+        });
+        let get1 = document.getElementById("print");
+        get1.innerHTML +="<tr><td><h2>Icon</h2><td><td><h2>Team</h2></td><td><h2>Rank</h2></td><td><h2>Stadium</h2></td></tr>"
+        for (i = 0; i < 20; i++) {
+            this.text = "<tr><td><img style='width: 50px;height: 50px' src='" + PMLdata[i].icon + "'</td>"
+                + "<td><h2>" + PMLdata[i].name + "</h2></td>" +
+                "<td><h2>" + PMLdata[i].Point + "</h2></td>"+
+            "<td><img  style='width: 150px;height: 50px' src='"+  PMLdata[i].svd +"'</td></tr>"
+            ;
+            get1.innerHTML += this.text;
+        }
+    }
+    Display()
+
+</script>
+</body>
+</html>

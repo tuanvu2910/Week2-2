@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PlayGame</title>
+</head>
+
+<style>
+    body {
+        background-image: url("FontImage/Ball.jpg");
+        font-family: 'Roboto', sans-serif;
+    }
+    .stanfButton a, .stanfButton a:link, .stanfButton a:visited {
+        color: #3D3D3D;
+    }
+
+    .stanfButton:hover {
+        border: 1px solid #F37900;
+        color: #F37900;
+    }
+
+    .stanfButton:active {
+        /*background: -webkit-gradient(linear, left top, left bottom, from(#87BF81), to(#3B7F34));     background: -moz-linear-gradient(top, #87BF81, #3B7F34);*/
+        background: #F37900;
+        color: white;
+    }
+
+    .Show {
+        display: block;
+        font-family: Arial;
+        font-size: 12px;
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        -webkit-box-shadow: rgba(0, 0, 0, .5) 0px 1px 2px;
+        moz-box-shadow: rgba(0, 0, 0, .5) 0px 1px 2px 4px;
+        vertical-align: middle;
+        padding-top: 20px;
+        display: block;
+        border: solid 1px lightgrey;
+        border-radius: 10px 10px 10px 10px;
+        font-weight: bold;
+        color: midnightblue;
+        background-color: #ffffff;
+        filter: alpha(opacity=90);
+        opacity: 0.9;
+        width: 700px;
+    }
+
+</style>
+<body onload>
+<table style="width:100%; bolder-collapse:collapse;" border="1">
+
+    <tr>
+        <td width=20%><img src="FontImage/PremierLeague.png"/></td>
+        <td style="text-align:center;background-color: white"><h1 style="color:#735fad;">Premier league 2019/20</h1>
+        </td>
+    </tr>
+</table>
+<div style="margin: auto" class="Show"> <a  class="stanfButton" href="http://localhost:63342/Qu%E1%BA%A3n%20l%C3%BD%20%C4%91%E1%BB%99i%20b%C3%B3ng/bxh.html?_ijt=8s6k2anffa48756hkusfg1uhf5"><div style="color: black">&nbsp&nbsp
+    Ranking</div><img style="width: 80px;height: 40px" src="FontImage/Bxh.jpg"</a> <fieldset><legend style="text-align: center"><h1>Kết Quả</h1></legend>
+
+        <table style="border:0px">
+ <tr id="print">
+        </table>
+    </fieldset></div>
+<iframe src="https://www.nhaccuatui.com/mh/background/XybyviDJB4" width="1" height="1" frameborder="0" allowfullscreen allow="autoplay"></iframe>
+<script src="js/PMLdata.js"></script>
+<script src="js/Playgame.js"></script>
+<script>
+    let Tournament = [];
+    let text = window.location.href.split('?');
+    let ids = text[1].split('-');
+    function take1(id) {
+        for (i=0;i<PMLdata.length;i++)
+        {
+            if (PMLdata[i].id == id){
+                return PMLdata[i];
+            }
+        }
+
+    }    function take2(id) {
+        for (i=0;i<PMLdata.length;i++)
+        {
+            if (PMLdata[i].id == id){
+                return PMLdata[i];
+            }
+        }
+    }
+
+    function brush(id,point) {
+        for (i=0;i<PMLdata.length;i++)
+        {
+            if (PMLdata[i].id == id){
+                 PMLdata[i].Point +=point;
+                 break;
+            }
+        }
+    }
+
+
+
+
+    function Fight() {
+        let team1 = take1(ids[0]);
+        let team2 = take2(ids[1]);
+  let print = document.getElementById("print");
+    let Random1 = Math.floor(Math.random()*5);
+    let Random2 = Math.floor(Math.random()*5);
+    if (Random1 == Random2){
+          console.log(team1.name+Random1+""+-+""+team2.name+Random2)
+      brush(team1.id,1);
+        brush(team2.id,1)
+         }if (Random1 > Random2){
+        console.log(team1.name+Random1+""+"Win"+""+team2.name+Random2)
+            brush(team1.id,3);
+            console.log(PMLdata)
+
+        }else {
+        console.log(team2.name+Random2+""+"Win"+""+team1.name+Random1)
+            brush(team1.id,3);
+            console.log(PMLdata)
+
+        }
+        PMLdata = PMLdata.sort(function (a,b) {
+            return b.Point - a.Point;
+        });
+
+        team1 = take1(ids[0]);
+        team2 = take2(ids[1]);
+
+        print.innerHTML= "<td><img src='"+team1.icon+"' style='margin:auto;width:150px;height:150px'></td><td><h1>"+Random1+"</h1></td></tr><tr><td>"+"<img src='"+team2.icon+"' style='margin:auto; width:150px;height:150px'></td><td><h1>"+ Random2 +"</h1></td>" +
+            "</tr><tr><ol id='prinf'></ol></tr>";
+        let text = "";
+        let get1 = document.getElementById("print");
+            text = "<td><img style='width: 250px;height: 250px' src='"+team1.svd+"'></br>" +
+                "<h1>"+"&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp"+ team1.Stadium +"</h1>" +
+                "</td></br>";
+            get1.innerHTML += text;
+            console.log(text);
+
+        team1 = take1(ids[0]);
+        team2 = take2(ids[1]);
+
+    }
+    Fight();
+</script>
+</body>
+</html>

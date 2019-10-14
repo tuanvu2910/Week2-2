@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>Title</title>
+
+</head>
+
+<body onload = loadF()>
+<center>
+             <h2> Viêt vào đí</h2>
+<textarea id="ta" style="margin: 500px 0 0 700px"></textarea>
+</center>
+
+</body>
+
+<script>
+
+    let loimuonnoi = "Bạn thật đẹp trai!";
+
+    let count =0;
+
+    function typing(evt) {
+
+        let noidi = document.getElementById("ta");
+
+
+
+        if(count<loimuonnoi.length){
+
+
+
+                noidi.value=loimuonnoi.value+loimuonnoi[count];
+
+                count++;
+
+            }
+
+        }else{
+
+            count =0;
+
+            loimuonnoi.value="";
+
+        }
+
+    }
+
+    function loadF() {
+
+        window.addEventListener('keypress',typing);
+
+    }
+
+</script>
+
+</html>
