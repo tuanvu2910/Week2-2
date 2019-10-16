@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    const c = [];
+    let random = Math.floor(Math.random()*100)
+    console.log(random);
+    for (let i=0;i<100;i++){
+        c.push(random);
+    }
+
+ function nhiPhan(yourChoise) {
+     console.log(random);
+     for (;;) {
+         yourChoise = parseInt(prompt("Bạn hãy chọn môt số"))
+         if (yourChoise == random){
+             alert("You Win");
+             break
+         }
+         if (yourChoise < random){
+             alert("Too low")
+         }
+         if (yourChoise > random){
+             alert("Too high")
+         }
+     }
+
+ }
+ nhiPhan();
+
+</script>
+</body>
+</html>
